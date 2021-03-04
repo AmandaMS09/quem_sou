@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Amandinha Gameplays</title>
+        <link rel="stylesheet" type="text/css" href="CSS/estilo_meu.css">
+        <meta name="Author" content="Amanda Moura de Souza">
+    </head>
+
+    <body>
+        <header>
+            <img src="IMG/logo.png" alt="Logo_da_Amandinha" id="logo">
+        </header>
+
+        <div id="container">
+            <div class="slide animacao">
+                <span class="num">1/3</span>
+                <a href="#dbd"><img src="IMG/dbd.jpeg" alt="img_deadbydaylight" class="imagens"></a>
+                <div class="div"><a class="ltext" href="#dbd">Dead by Daylight</a></div>
+            </div>
+            <div class="slide animacao">
+                <span class="num">2/3</span>
+                <a href="#mine"><img src="IMG/mine.jpeg" alt="img_minecraft" class="imagens"></a>
+                <div class="div"><a class="ltext" href="#mine">Minecraft</a></div>
+            </div>
+            <div class="slide animacao">
+                <span class="num">3/3</span>
+                <a href="#paladins"><img src="IMG/paladins.jpeg" alt="img_paladins" class="imagens"></a>
+                <div class="div"><a class="ltext" href="#paladins">Paladins</a></div>
+            </div>
+            <a class="ant" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="post" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <article>
+            <h1>Sobre mim</h1>
+            <div class="texto">
+                <p>Meu nome é Amanda, eu tenho 16 anos e estudo no colégio COTEMIG. O que mais fez com que
+                 me interessasse pela área de TI, foram video games, então eles são uma parte importante
+                 da minha trajetória para chegar onde estou hoje.</p>
+                <p>Sendo assim, nada melhor pra estar em um site sobre mim do que os jogos. Na maior parte
+                 do meu tempo livre esses são os multiplayer que mais jogo com os meus amigos.</p>
+            </div>
+            <hr>            
+            <h1 id="dbd">Dead by Daylight</h1>
+            <div class="texto">
+                <p><b>O jogo que eu mais me divirto jogando.</b> Começei jogando sozinha, até um amigo comprar
+                 e começarmos a jogar mais, isso levou a cada vez mais amigos, e agora, muitas vezes nós
+                 completamos um time inteiro com 4 idiotas tentando fugir do assassino.</p>
+                <p>Tem o Gabrielzão de Kate Gostosa, Alicepls de Nea Silêncio, grande Giselle de Yui Motoca
+                 e eu de Meg Coitada. O quarteto mais incrível do <b>Dead by Daylight</b> confirmado.</p>
+                <div class="div_img">
+                    <img src="IMG/dbd_amiguinhos.jpeg" alt="dbd_amiguinhos" class="img_txt">
+                    <img src="IMG/dbd_spawn.jpeg" alt="dbd_spawn" class="img_txt">
+                </div>
+                <p>Além de gostar do jogo pela gameplay, pela diversidade dos assassinos e das habilidades dos
+                 personagens, pelas skins e pelos eventos, um dos melhores piores pontos que tornam o DBD
+                 divertido, são os amados <b>bugs.</b></p>
+                <p>Os belíssimos bugs de skin, de animação, bugs do lobby, bugs de range da arma e também do mapa.</p>
+                <div class="div_img">
+                    <img src="IMG/dbd_kate.jpeg" alt="dbd_kate" class="img_txt">
+                    <img src="IMG/dbd_meg.jpeg" alt="dbd_meg" class="img_txt">
+                </div>
+            </div>
+            <hr>
+            <h1 id="mine">Minecraft</h1>
+            <div class="texto">
+                <p>No <b>Minecraft</b> o que eu mais faço são pixelarts com meus amiguinhos. Temos um mapa com
+                 pixelarts de anime, jogos, desenhos e a <b>perfeição:</b> The Last of Us Parte II(melhor jogo do
+                 universo).</p>
+                <p>Além disso, nós jogamos em um mundo de sobrevivência fazendo nossa casinha bonitinha e se
+                 armando para zerar o jogo. De vez em quando também entramos para jogar alguns minigames.</p>
+                <div class="div_img">
+                   <img src="IMG/mine_lhama.jpeg" alt="mine_lhama" class="img_txt">
+                   <img src="IMG/mine_amiguinhos.jpeg" alt="mine_amiguinhos" class="img_txt">
+                </div>
+            </div>
+            <hr>
+            <h1 id="paladins">Paladins</h1>
+            <div class="texto">
+                <p><b>Paladins.</b> O que falar sobre esse jogo além de que ele me faz passar raiva como nenhum
+                 outro jogo? Time adversário sendo tóxico, pegando sempre personagens que conseguem me solar
+                 muito fácil, o healer do time sem dar conta de curar o tanque, os danos do time sem dar dano,
+                 flanco sem matar e tanque fora do ponto. <b>Que jogo lindo.</b></p>
+                <p>Apesar de tudo isso, por algum motivo ainda dá vontade de jogar. Acho que quando eu estou com
+                 a galera não tem como não me divertir</p>
+                <div class="div_img">
+                    <img src="IMG/paladins_bug.jpeg" alt="paladins_bug" class="img_txt">
+                    <img src="IMG/paladins_historico.jpeg" alt="paladins_historico" class="img_txt">
+                </div>
+            </div>
+        </article>
+
+        <script>
+            var num_img = 1;
+            showSlides(num_img);
+            
+            function plusSlides(n) {
+              showSlides(num_img += n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("slide");
+              if (n > slides.length) {num_img = 1}    
+              if (n < 1) {num_img = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              slides[num_img-1].style.display = "block";
+            }
+        </script>
+
+    </body>
+</html>
